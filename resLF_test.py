@@ -1,7 +1,7 @@
 import torch
 import os
 import numpy as np
-from skimage.measure import compare_ssim
+from skimage.metrics import structural_similarity as compare_ssim
 from math import log10
 import cv2
 import skimage.color as color
