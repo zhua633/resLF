@@ -9,19 +9,45 @@ import numpy as np
 
 def imgcrop():
     # Opens a image in RGB mode
-    im = Image.open(r"C:\Users\Anvilly Huang\Documents\GitHub\resLF\img\croppedlong.png")
+    im = Image.open(r"C:\Users\Anvilly Huang\Documents\GitHub\resLF\img\rawimg.png")
     # Setting the points for cropped image
-    left = 25
-    top = 25
-    right = 289
-    bottom = 132
+
+    # TestRes01
+    # left =460
+    # top = 50
+    # right = left+50
+    # bottom = top+50
+
+    # TestRes02
+    # left =40
+    # top = 460
+    # right = left+50
+    # bottom = top+50
+
+    # TestRes03
+    # left =460
+    # top = 460
+    # right = left+50
+    # bottom = top+50
+
+    # TestRes04
+    # left =480
+    # top = 480
+    # right = left+50
+    # bottom = top+50   
+
+    # Rawimg
+    left =2400
+    top = 1700
+    right = left+50
+    bottom = top+50   
 
     # Cropped image of above dimension
     # (It will not change original image)
     im1 = im.crop((left, top, right, bottom))
     
     # Shows the image in image viewer
-    im1.save(f"{filepath}\cropped.png") 
+    im1.save(f"{filepath}\RawimgCropped03.png") 
     im1.show()
 
 
@@ -99,6 +125,6 @@ def stitch2():
 filepath=r"C:\Users\Anvilly Huang\Documents\GitHub\resLF\img"
 # imglist=  [f for f in listdir(filepath) if (isfile(join(filepath,f)) and f.startswith("cropped"))]
 
-# imgcrop()
+imgcrop()
 # preprocessing()
-stitch2()
+# stitch2()
