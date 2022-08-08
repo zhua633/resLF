@@ -52,7 +52,7 @@ def createDataRecord(out_filename, addrs, labels):
     sys.stdout.flush()
 
 
-cat_dog_train_path = r'C:\Users\Anvilly Huang\Documents\GitHub\resLF\Holograms\*.png'
+cat_dog_train_path = r'C:\Users\Anvilly Huang\Documents\GitHub\resLF\Holograms\H1\*.png'
 # read addresses and labels from the 'train' folder
 addrs = glob.glob(cat_dog_train_path)
 labels = [0 if 'Cat' in addr else 1 for addr in addrs]  # 0 = Cat, 1 = Dog
