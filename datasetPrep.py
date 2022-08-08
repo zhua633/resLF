@@ -39,7 +39,7 @@ def createDataRecord(out_filename, addrs, labels):
 
         # Create a feature
         feature = {
-            'image_raw': _bytes_feature(img.tostring()),
+            'image_raw': _bytes_feature(img.tobytes()),
             'label': _int64_feature(label)
         }
         # Create an example protocol buffer
